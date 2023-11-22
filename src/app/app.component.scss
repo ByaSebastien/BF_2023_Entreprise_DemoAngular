@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    header {
+        height: 10%;
+        background-color: gainsboro;
+    }
+
+    .content-low {
+        display: flex;
+        height: 90%;
+
+        nav {
+            width: 20%;
+            background-color: gainsboro;
+        }
+
+        main {
+            width: 80%;
+        }
+    }
+
+    footer {
+        background-color: gainsboro;
+    }
+}
