@@ -13,8 +13,7 @@ export class ConvertTempPipe implements PipeTransform {
       case 'f':
         return (value * 9 / 5) + 32 + ' F°';
       default:
-        return value + unit;
+        return value + ' ' + unit;
     }
   }
-
 }

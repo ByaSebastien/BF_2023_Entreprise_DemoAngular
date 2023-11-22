@@ -1,0 +1,7 @@
+<div class="chapter">
+    <h2>Timer</h2>
+    <h3>{{seconds | convertTime}}</h3>
+    <button [disabled]="isActive" (click)="start()">Start</button>
+    <button [disabled]="!isActive" (click)="stop()">Stop</button>
+    <button (click)="reset()">Reset</button>
+</div>
