@@ -1,0 +1,13 @@
+<h1>Component Directives</h1>
+<div class="chapter">
+    <h2>ngStyle</h2>
+    <p [ngStyle]="currentStyle">Formation Angular</p>
+    <button (click)="toggleItalic()">Italic</button>
+    <button (click)="toggleBold()">Bold</button>
+    <button (click)="toggleSize()">Size</button>
+</div>
+<div class="chapter">
+    <h2>ngClass</h2>
+    <p [ngClass]="{ red : isActive}">Je prefere ceci</p>
+    <button (click)="toggleIsActive()">Activer</button>
+</div>
