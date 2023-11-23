@@ -1,0 +1,10 @@
+<div class="chapter">
+    <h2>Demo Input/Output</h2>
+    <div class="parent">
+        <p *ngIf="infoEnfant">info reçue de l'enfant : {{infoEnfant}}</p>
+        <input type="text" [(ngModel)]="name" placeholder="Nom">
+    </div>
+    <div class="enfant">
+        <app-enfant (sendEvent)="onEvent($event)" [nameParent]="name"></app-enfant>
+    </div>
+</div>

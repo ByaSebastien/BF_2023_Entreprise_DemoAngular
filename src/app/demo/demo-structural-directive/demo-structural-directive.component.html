@@ -2,7 +2,7 @@
 <div class="chapter">
     <h2>ngIf</h2>
     <!-- <h3 *ngIf="isDayTime">🌞Jour🌞</h3>
-    <h3 *ngIf="!isDayTime">🌚Nuit🌚</h3> -->
+        <h3 *ngIf="!isDayTime">🌚Nuit🌚</h3> -->
     <h3 *ngIf="isDayTime; else notDayTime">🌞Jour🌞</h3>
     <ng-template #notDayTime>
         <h3>🌚Nuit🌚</h3>
@@ -32,4 +32,31 @@
             </tr>
         </tbody>
     </table>
+</div>
+<div class="chapter">
+    <h2>ngSwitch</h2>
+    <div [ngSwitch]="true">
+        <div *ngSwitchCase="day === 1">
+            <p>Lundi</p>
+        </div>
+        <div *ngSwitchCase="day === 2">
+            <p>Mardi</p>
+        </div>
+        <div *ngSwitchCase="day === 3 || day === 4">
+            <p>Mercredi</p>
+        </div>
+        <!-- <div *ngSwitchCase="day === 4">
+            <p>Jeudi</p>
+        </div> -->
+        <div *ngSwitchCase="day === 5">
+            <p>Vendredi</p>
+        </div>
+        <div *ngSwitchCase="day === 6">
+            <p>Samedi</p>
+        </div>
+        <div *ngSwitchCase="day === 7">
+            <p>Dimanche</p>
+        </div>
+        <div *ngSwitchDefault>Error</div>
+    </div>
 </div>

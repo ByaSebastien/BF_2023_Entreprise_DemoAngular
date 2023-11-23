@@ -1,0 +1,6 @@
+<div class="chapter">
+    <h2>Demo Service</h2>
+    <p>Status de isConnected : {{isConnected}}</p>
+    <button (click)="login()" *ngIf="!isConnected">Login</button>
+    <button (click)="logout()" *ngIf="isConnected">Logout</button>
+</div>

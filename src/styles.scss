@@ -21,3 +21,21 @@ body {
         color: white;
     }
 }
+
+a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    margin: 3px;
+}
+
+button:disabled {
+    background-color: gainsboro;
+    color: grey;
+}

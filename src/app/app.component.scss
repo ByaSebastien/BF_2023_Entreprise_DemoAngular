@@ -7,6 +7,7 @@
     header {
         height: 10%;
         background-color: gainsboro;
+        border-bottom: solid black 3px;
     }
 
     .content-low {
@@ -14,12 +15,12 @@
         height: 90%;
 
         nav {
-            width: 20%;
+            width: 30%;
             background-color: gainsboro;
         }
 
         main {
-            width: 80%;
+            width: 70%;
         }
     }
 

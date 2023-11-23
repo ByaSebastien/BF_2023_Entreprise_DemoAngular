@@ -10,6 +10,7 @@ export class DemoStructuralDirectiveComponent implements OnInit {
 
   isDayTime: boolean = true;
   books!: Book[];
+  day!: number;
 
   ngOnInit(): void {
     this.books = [
@@ -31,7 +32,8 @@ export class DemoStructuralDirectiveComponent implements OnInit {
         author: 'Georges',
         nbPage: 100
       }
-    ]
+    ];
+    this.day = new Date().getDay()
   }
 
   toggleIsDayTime() {

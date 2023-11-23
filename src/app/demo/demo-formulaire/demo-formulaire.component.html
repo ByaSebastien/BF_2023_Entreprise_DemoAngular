@@ -1,0 +1,23 @@
+<div class="chapter">
+    <h2>Demo Formulaire</h2>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="isbn" placeholder="isbn">
+        <p *ngIf="bookForm.get('isbn')?.errors?.['required'] && 
+                  bookForm.get('isbn')?.dirty" class="error">
+            Ce champ est requis
+        </p>
+
+        <input type="text" formControlName="title" placeholder="titre">
+
+        <textarea formControlName="description" placeholder="description">
+
+        </textarea>
+
+        <input type="text" formControlName="author" placeholder="auteur">
+
+        <label for="nbPage">Nombre de pages :</label>
+        <input type="number" formControlName="nbPage" id="nbPage">
+
+        <button type="submit">Ajouter</button>
+    </form>
+</div>
