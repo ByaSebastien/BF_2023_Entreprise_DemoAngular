@@ -1,0 +1,11 @@
+<div class="chapter">
+    <h2>Demo http</h2>
+    <button *ngIf="isconnected" (click)="redirectToCreate()">Create new movie</button>
+    <ul>
+        <!-- <li *ngFor="let movie of movies$ |async"> -->
+        <li *ngFor="let movie of movies">
+            <p>{{movie.id}} {{movie.title}} {{movie.author}}</p>
+            <button *ngIf="isconnected" (click)="delete(movie.id)">Delete</button>
+        </li>
+    </ul>
+</div>

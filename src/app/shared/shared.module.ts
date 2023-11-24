@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToFahrenheitPipe } from './pipes/to-fahrenheit.pipe';
 import { ConvertTempPipe } from './pipes/convert-temp.pipe';
 import { ConvertTimePipe } from './pipes/convert-time.pipe';
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -16,14 +18,16 @@ import { ConvertTimePipe } from './pipes/convert-time.pipe';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
     ToFahrenheitPipe,
     ConvertTempPipe,
-    ConvertTimePipe
+    ConvertTimePipe,
+    RouterModule,
   ],
 })
 export class SharedModule { }

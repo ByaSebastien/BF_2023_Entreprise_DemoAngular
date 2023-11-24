@@ -57,6 +57,14 @@ export class NavComponent implements OnInit {
           {
             title: 'Formulaire',
             url: '/demo/demo07'
+          },
+          {
+            title: 'Routing',
+            url: '/demo/demo08'
+          },
+          {
+            title: 'Http',
+            url: '/demo/demo09'
           }
         ],
         isVisible: false

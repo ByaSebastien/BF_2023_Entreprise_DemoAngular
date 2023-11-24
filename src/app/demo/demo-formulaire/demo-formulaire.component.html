@@ -6,6 +6,10 @@
                   bookForm.get('isbn')?.dirty" class="error">
             Ce champ est requis
         </p>
+        <p *ngIf="bookForm.get('isbn')?.errors?.['isbnError'] && 
+                  bookForm.get('isbn')?.touched" class="error">
+            {{bookForm.get('isbn')?.errors?.['isbnError']}}
+        </p>
 
         <input type="text" formControlName="title" placeholder="titre">
 

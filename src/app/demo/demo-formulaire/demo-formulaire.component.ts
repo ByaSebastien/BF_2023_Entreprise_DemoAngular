@@ -25,6 +25,12 @@ export class DemoFormulaireComponent implements OnInit {
 
   onSubmit() {
 
+    Object.keys(this.bookForm.controls).forEach(key => {
+      this.bookForm.get(key)?.markAsDirty();
+    });
+    this.bookForm.markAllAsTouched();
+
+
     if (!this.bookForm.valid) {
       console.log('error');
 

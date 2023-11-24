@@ -8,6 +8,12 @@ import { DemoStructuralDirectiveComponent } from './demo-structural-directive/de
 import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.component';
 import { DemoServiceComponent } from './demo-service/demo-service.component';
 import { DemoFormulaireComponent } from './demo-formulaire/demo-formulaire.component';
+import { DemoRouteComponent } from './demo-route/demo-route.component';
+import { RecupParamComponent } from './demo-route/recup-param/recup-param.component';
+import { isLoggedGuard } from './demo-route/guards/is-logged.guard';
+import { DemoHttpComponent } from './demo-http/demo-http.component';
+import { CreateComponent } from './demo-http/create/create.component';
+import { movieResolver } from './demo-http/resolvers/movie.resolver';
 
 const routes: Routes = [
   {
@@ -19,6 +25,14 @@ const routes: Routes = [
       { path: 'demo05', component: DemoInputOutputComponent },
       { path: 'demo06', component: DemoServiceComponent },
       { path: 'demo07', component: DemoFormulaireComponent },
+      { path: 'demo08', component: DemoRouteComponent, canActivate: [isLoggedGuard] },
+      { path: 'demo08/:param', component: RecupParamComponent },
+      {
+        path: 'demo09',
+        component: DemoHttpComponent,
+        resolve: { mr: movieResolver }
+      },
+      { path: 'demo09/create', component: CreateComponent, canActivate: [isLoggedGuard] },
     ]
   },
 

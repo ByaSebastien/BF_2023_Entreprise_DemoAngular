@@ -12,6 +12,11 @@ import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.
 import { EnfantComponent } from './demo-input-output/enfant/enfant.component';
 import { DemoServiceComponent } from './demo-service/demo-service.component';
 import { DemoFormulaireComponent } from './demo-formulaire/demo-formulaire.component';
+import { DemoRouteComponent } from './demo-route/demo-route.component';
+import { RecupParamComponent } from './demo-route/recup-param/recup-param.component';
+import { DemoHttpComponent } from './demo-http/demo-http.component';
+import { CreateComponent } from './demo-http/create/create.component';
+import { FakeAuthServiceService } from './demo-service/service/fake-auth-service.service';
 
 
 @NgModule({
@@ -25,11 +30,18 @@ import { DemoFormulaireComponent } from './demo-formulaire/demo-formulaire.compo
     EnfantComponent,
     DemoServiceComponent,
     DemoFormulaireComponent,
+    DemoRouteComponent,
+    RecupParamComponent,
+    DemoHttpComponent,
+    CreateComponent,
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
     SharedModule
   ],
+  providers: [
+    FakeAuthServiceService
+  ]
 })
 export class DemoModule { }
